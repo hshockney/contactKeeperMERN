@@ -417,6 +417,11 @@ table th {
     transition: opacity 1000ms ease-in;
 }
 
+/*Icon Styles */
+.icon-margin {
+    margin-right: 10px;
+}
+
 /* Mobile Styles */
 @media (max-width: 700px) {
     .hide-sm {
