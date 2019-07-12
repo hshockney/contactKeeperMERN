@@ -20,7 +20,7 @@ const ContactState = props => {
         name: 'Heather Shockney',
         email: 'heathershockney.minedminds.org',
         phone: '724-231-9721',
-        type: 'Personal'
+        type: 'Professional'
       },
       {
         id: 2,
