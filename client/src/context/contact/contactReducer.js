@@ -10,6 +10,14 @@ import {
 
 export default (state, action) => {
   switch (action.type) {
+    case FILTER_CONTACTS:
+      return {
+        ...state,
+        filtered: state.contacts.filter(contact => {
+          const regex = new RegExp(`${action.payload}`, 'gi');
+          return contact.name.match(regex) || contact.email.match(regex);
+        })
+      };
     case UPDATE_CONTACT:
       return {
         ...state,
@@ -26,6 +34,11 @@ export default (state, action) => {
       return {
         ...state,
         current: null
+      };
+    case CLEAR_FILTER:
+      return {
+        ...state,
+        filtered: null
       };
     case DELETE_CONTACT:
       return {
