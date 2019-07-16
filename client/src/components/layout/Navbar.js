@@ -6,6 +6,7 @@ import AuthContext from '../../context/auth/authContext';
 const Navbar = ({ title, icon }) => {
   const authContext = useContext(AuthContext);
   const { isAuthenticated, logout, user } = authContext;
+  console.log(authContext, 'user');
   const onLogout = () => {
     logout();
   };
